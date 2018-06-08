@@ -9,7 +9,6 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Kata</h1>
         </header>
         <p className="App-intro">
          El ejercicio consiste en recorrer un array en espiral de izquierda a derecha, se deben realizar test de lo que se crea necesario del código con jest.
