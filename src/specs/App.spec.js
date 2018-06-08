@@ -18,7 +18,6 @@ describe('App', () => {
   
   describe('on instance', () => {
     it('should defined default states and props', () => {
-      console.log()
       expect(component.state()).toEqual({});
     });
   });
