@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import example from './example.png';
+import logo from './assets/logo.svg';
+import example from './assets/example.png';
 import './App.css';
 
 class App extends Component {
@@ -9,7 +9,7 @@ class App extends Component {
   
     this.state = {};
   }
-  
+
   render() {
     return (
       <div className="App">
