@@ -1,9 +1,25 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {shallow} from 'enzyme';
 import App from './App';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
+describe('Login', () => {
+  let component;
+  let props;
+  let instance;
+
+  const render = () => {
+    props = {
+    };
+    
+    component = shallow(<App {...props} />);
+    instance = component.instance();
+  };
+
+  beforeEach(() => {
+    // render();
+  });
+
+  it('renders without crashing', () => {
+    // expect(component.state().form).toEqual();
+  });
 });
