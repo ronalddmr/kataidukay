@@ -27,11 +27,20 @@ class Kata extends Component {
 
   }
 
+  componentWillMount(){
+    
+  }
+
   render() {
     return (
+      
       <div className="Kata">
+        {/* {this.state.printerArray.map((row)=>{
+          return row.map((col)=>{
+            return <span>{col}} */}
         Trabajaremos el ejercicio aqui
       </div>
+
     );
   }
 }
