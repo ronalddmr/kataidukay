@@ -13,17 +13,49 @@ class Kata extends Component {
 
     for (let row=0; row < rowNumber; row++)
     {
-      const initRow=[];
-      for(let col=0; col < colNumber; col++)
-      {
-        initRow.push(count);
-        count++;
-      }
+      const initRow=Array.from({length: colNumber}, ()=> count++);
       printerArray.push(initRow);
     }
 
     this.setState({printerArray: printerArray})
 
+  }
+
+  loopArrayInSnail()
+  {
+    const loopArray = this.state.printerArray;
+    let result=[];
+    //console.log(loopArray)
+    const colNumber = loopArray[0].length-1;
+    const rowNumber = loopArray.length-1;
+
+    for (let item=0; item<=colNumber;item++){
+      result.push(loopArray[0][item]);
+    }
+    
+    for (let item=1; item<=rowNumber;item++){
+       //console.log(item, colNumber)
+       result.push(loopArray[item][colNumber]);
+       
+    }
+        
+    for (let item=colNumber-1; item>=0;item--){
+ 
+       result.push(loopArray[rowNumber][item]);
+    }
+
+    for (let item=rowNumber-1; item>0;item--){
+ 
+       result.push(loopArray[item][0]);
+    }
+
+    for (let item=1; item<=colNumber-1;item++){
+      result.push(loopArray[1][item]);
+    }
+    // result.push(loopArray[1][1]);
+
+    this.setState({resultArray: result});
+  
   }
 
   componentWillMount(){
