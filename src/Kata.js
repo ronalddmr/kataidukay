@@ -4,7 +4,6 @@ import './Kata.css';
 class Kata extends Component {
   constructor(props) {
     super(props);
-  
     this.state = {};
   }
 
@@ -28,19 +27,21 @@ class Kata extends Component {
   }
 
   componentWillMount(){
-    
+    this.generateArray(4, 3);
   }
 
   render() {
     return (
       
       <div className="Kata">
-        {/* {this.state.printerArray.map((row)=>{
-          return row.map((col)=>{
-            return <span>{col}} */}
-        Trabajaremos el ejercicio aqui
+        <p> Resultado </p>
+        {this.state.printerArray.map((row, index) => {
+          return (
+            <p key={index}>{row.map((col, id) => {return <span key={id}> {col}</span>})}</p>
+          )
+        })
+        }
       </div>
-
     );
   }
 }
